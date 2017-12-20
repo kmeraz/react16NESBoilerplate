@@ -8,7 +8,7 @@ const server = http.Server(app);
 const io = socketIO(server);
 const PORT = 8080;
 server.listen(PORT);
-console.log('Socket chat listening on port ', PORT);
+console.log('NES server listening on port ', PORT);
 
 io.on('connection', function (socket) {
   socket.emit('news', { hello: 'world' });
